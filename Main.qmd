@@ -1,0 +1,62 @@
+---
+format: pdf
+pdf-engine: xelatex
+toc: true
+toc-depth: 4
+toc-title: "Table of Contents"
+toc-location: body
+code-line-numbers: true
+number-sections: true
+mainfont: Inter
+sansfont: Inter
+keep-tex: true
+colorlinks: true
+include-in-header: 
+  text: |
+    \usepackage{amsmath, xparse}
+    \usepackage{fancyvrb, fvextra}
+    \usepackage{bm}
+    \usepackage{svg}
+    \usepackage{listings}
+    \usepackage{xifthen}
+    \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}  
+    \lstset{basicstyle=\ttfamily\footnotesize,breaklines=true}
+
+include-before-body: 
+  text: |
+    \input{./title.tex}
+    \newpage
+---
+
+{{< pagebreak >}}
+
+# Kinematics
+
+## Variables
+**Position**
+
+- Typically given by the variable $x$
+
+**Time**
+
+- Typically given by the variables $t$
+
+**Displacement**
+
+- Defined as the change in position ($X_f - X_i$)
+- Given by the variable $\Delta x$
+
+**Distance**
+
+- You have to take the magnitude of vectors for every time you change position
+- $|x_2 - x_1| + |x_1 - x_0| + ...$
+
+**Average Velocity**
+
+- Defined as the change in displacement over time
+- $\frac{\Delta x}{\Delta t} = V_\text{avg} = \bar{V}$
+
+**Velocity**
+
+- Defined as the change in displacement as time approaches 0
+- $\lim_{\Delta t \to 0} \frac{\Delta x}{\Delta t} = \frac{dx}{dt} = V$

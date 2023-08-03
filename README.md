@@ -1,2 +1,5 @@
 # AP Physics M/E&M Notes
- This is a repository containing my class notes for GSMST's AP Physics: Mechanics and Electricity & Magnetism course.
+This is a repository containing my class notes for GSMST's AP Physics: Mechanics and Electricity & Magnetism course.
+
+## Units Covered (Work In Progress)
+- Kinematics
