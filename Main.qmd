@@ -15,10 +15,12 @@ include-in-header:
   text: |
     \usepackage{amsmath, xparse}
     \usepackage{fancyvrb, fvextra}
+    \usepackage{graphicx}
     \usepackage{bm}
     \usepackage{svg}
     \usepackage{listings}
     \usepackage{tikz}
+    \usepackage{multicol}
     \usepackage{xifthen}
     \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}  
     \lstset{basicstyle=\ttfamily\footnotesize,breaklines=true}
@@ -37,49 +39,49 @@ include-before-body:
 # Kinematics
 
 ## Variables
-**Position**
+### **Position**
 
 - Typically given by the variable $x$
 
-**Time**
+### **Time**
 
 - Typically given by the variables $t$
 
-**Displacement**
+### **Displacement**
 
 - Defined as the change in position ($X_f - X_i$)
 - Given by the variable $\Delta x$
 
-**Distance**
+### **Distance**
 
 - You have to take the magnitude of vectors for every time you change position
 - $S = |x_2 - x_1| + |x_1 - x_0| + ...$
 
-**Average Velocity**
+### **Average Velocity**
 
 - Defined as the change in displacement over time
 - $\frac{\Delta x}{\Delta t} = V_\text{avg} = \bar{V}$
 
-**Velocity**
+### **Velocity**
 
 - Defined as the change in displacement as time approaches 0
 - $\lim_{\Delta t \to 0} \frac{\Delta x}{\Delta t} = \frac{dx}{dt} = V$
 
-**Average Acceleration**
+### **Average Acceleration**
 
 - Defined as the change in velocity over time
 - $\frac{\Delta V}{\Delta t} = A_\text{avg} = \bar{A}$
 
-**Acceleration**
+### **Acceleration**
 
 - Defined as the change in velocity as time approaches 0
 - $a = \lim_{\Delta t \to 0} \frac{\Delta V}{\Delta t} = \frac{dV}{dt} = \frac{d^2x}{dt^2}$
 
-**Speed**
+### **Speed**
 - $\text{Speed} = \frac{S}{t}$
 - Alternatively, when referring to vectors: $\text{Speed} = ||\vec{V}||$
 
-## Kinematics: Velocity and Position Definitions (08/03 Homework)
+## Velocity and Position Definitions (08/03 Homework)
 ### Problem 1 
 The position versus time for a certain particle moving along the x axis is shown in the figure below. Find the average velocity in the following time intervals.
 
@@ -154,19 +156,19 @@ t &= 1.839 \text{ hours}
 
 ## Derivative Relationships
 
-**Acceleration and Velocity**
+### **Acceleration and Velocity**
 
 - $a = \frac{dV}{dt}$
 - $V = \frac{dx}{dt}$
-- $\int{V_0}{V} dV = \int_{0}^{t} a dt$
+- $\int_{V_0}^{V} dV = \int_{0}^{t} a \ dt$
 - $V\rvert_{V_0}^{V} = a\rvert_{0}^{t}$
 - $V - V_0 = at$
 - $V = at + V_0$
 
-**Acceleration and Position**
+### **Acceleration and Position**
 
 - $V = \frac{dx}{dt}$
-- $\int_{0}^{x} V dt = \int_{0}^{t} at + V_0 dt$
+- $\int_{0}^{x} V dt = \int_{0}^{t} at + V_0 \ dt$
 - $x\rvert_{0}^{x} = \frac{1}{2}at^2 + V_0t\rvert_{0}^{t}$
 - $x = \frac{1}{2}at^2 + V_0t$
 
@@ -186,7 +188,7 @@ a &= 192
 ## Practice with 1-D Kinematic Equations (moderate)
 
 ### Problem 1
-A world-class sprinte rcan burst out of the blocks to essentially top speed (of about $11.5$ m/s) in the first $15.0$m of the race. What is the average acceleration f this sprinter and how long does it take her to reach that speed (she accelerates uniformly)?
+A world-class sprinter can burst out of the blocks to essentially top speed (of about $11.5$ m/s) in the first $15.0$m of the race. What is the average acceleration of this sprinter and how long does it take her to reach that speed (she accelerates uniformly)?
 
 ### Problem 2
 A car slows down from a speed of $25.0$m/s to rest in $5.0$s. How far did it travel in that time?
@@ -210,4 +212,85 @@ Determine the stopping distances for an automobile with ana initial speed of 90k
 (a) for $a =-4.0 \text{m/s}^2$
 (b) for $a = -8.0 \text{m/s}^2$
 
-##
+## Acceleration Definitions (08/04 Homework)
+
+### Problem 1
+A $48.0$ g Super Ball traveling at $29.0$ m/s bounces off a brick wall and rebounds at $18.0$ m/s. A high-speed camera records this event. If the ball is in contact with the wall for $4.05$ ms, what is the magnitude of the average acceleration of the ball during this time interval?
+
+  - $a = \left|\frac{-18-29}{0.00405} = 11604.938\right|$ m/s$^2$
+
+{{< pagebreak >}}
+
+### Problem 2
+A child rolls a marble on a bent track that is 100 cm long as shown in the figure below. We use $x$ to represent the position of the marble along the track. On the horizontal sections from $x=0$ to $x=20$ cm and from $x=40$ to $x=60$ cm, the marble rolls with constant speed. On the sloping sections, the marble's speed changes steadily. At the places where the slope changes, the marble stays on the track and does not undergo any sudden changes in speed. The child gives the marble some initial speed at $x=0$ and $t=0$ and then watches it roll to $x=90$ cm, where it turns around, eventually returning to $x=0$ with the same speed with which the child released it. Prepare graphs of $x$ versus $t, v_x$ versus $t$, and $a_x$ versus $t$, with their time axes identical, to show the motion of the marble. You will not be able to place any numbers other than zero on the horizontal axis or on the velocity and acceleration axes, but show the correct graph shapes.
+
+![](img/Acceleration%20Definitions%20HW/problem1.png)
+
+{{< pagebreak >}}
+
+```{=latex}
+\begin{figure}[!htb]
+   \begin{minipage}{0.48\textwidth}
+     \centering
+     \includegraphics[width=\linewidth]{img/Acceleration Definitions HW/xversust.png}
+     \caption*{$x$ versus $t$}
+   \end{minipage}\hfill
+   \begin{minipage}{0.48\textwidth}
+     \centering
+     \includegraphics[width=\linewidth]{img/Acceleration Definitions HW/vxversust.png}
+     \caption*{$V_x$ versus $t$}
+   \end{minipage}
+\end{figure}
+
+\begin{figure}[!htb]
+\begin{center}
+   \begin{minipage}{0.48\textwidth}
+     \includegraphics[width=\linewidth]{img/Acceleration Definitions HW/axversust.png}
+     \caption*{$a_x$ versus $t$}
+  \end{minipage}\hfill
+\end{center}
+\end{figure}
+```
+{{< pagebreak >}}
+
+### Problem 3
+A particle starts from rest and accelerates as shown in the figure below. 
+
+![](img/Acceleration%20Definitions%20HW/problem3.png)
+
+(a) Determine the particle's speed at $t = 10.0$ s.
+  - $\int_0^{10} a \ dt = 10 \cdot 2 = 20$ m/s
+(b) Determine the particle's speed at $t = 20.0$ s?
+  - $\int_0^{20} a \ dt = 10 \cdot 2 + 5 \cdot (-3) = 20 - 15 = 5$ m/s
+(c) Determine the distance traveled in the first $20.0$ s. (Enter your answer to one decimal places.)
+
+\begin{align*}
+\Delta x \text{ from 0-10 seconds: }\frac{1}{2} \cdot 2 \cdot 10^2 &= 100 \\
+\Delta x \text{ from 10-15 seconds: }20 \cdot 5 &= 100 \\
+\Delta x \text{ from 15-20 seconds: } \frac{1}{2} \cdot -3 \cdot 5^2 + 20 \cdot 5 &= 62.5 \\
+\therefore \Delta x &= 262.5 \text{ m}
+\end{align*}
+
+### Problem 4
+An object moves along the x axis according to the equation $x = 3.25t^2 − 2.00t + 3.00$, where $x$ is in meters and $t$ is in seconds.
+
+(a) Determine the average speed between $t = 1.70$ s and $t = 3.30$ s.
+  - $\bar{V} = \frac{x(3.30)-x(1.70)}{t_1-t_0} = \frac{(3.25(3.30)^2-2(3.30)+3) - (3.25(1.70)^2-2(1.70)+3)}{3.30-1.70} = 14.25$ m/s
+
+(b) Determine the instantaneous speed at $t = 1.70$ s.
+  - $V = \frac{dx}{dt} = 6.5(1.7)-2 = 9.05$ m/s
+
+(c) Determine the instantaneous speed at $t = 3.30$ s.
+  - $V = \frac{dx}{dt} = 2(3.25)(3.3)-2 = 19.45$ m/s
+
+(d) Determine the average acceleration between $t = 1.70 s$ and $t = 3.30$ s.
+  - $\bar{a} = \frac{V(3.30)-V(1.70)}{t_1-t_0} = \frac{(2(3.25)(3.30)-2)-(2(3.25)(1.70)-2)}{3.30-1.70} = 6.5$ m/s$^2$
+
+(e) Determine the instantaneous acceleration at $t = 1.70$ s.
+  - $a = \frac{dV}{dt} = 2(3.25) = 6.5$ m/s$^2$
+
+(f) Determine the instantaneous acceleration at $t = 3.30$ s.
+  - $a = \frac{dV}{dt} = 2(3.25) = 6.5$ m/s$^2$
+
+(g) At what time is the object at rest?
+  - 0 = $6.5t-2 \implies 0.308$ s

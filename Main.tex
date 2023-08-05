@@ -82,10 +82,12 @@
 
 \usepackage{amsmath, xparse}
 \usepackage{fancyvrb, fvextra}
+\usepackage{graphicx}
 \usepackage{bm}
 \usepackage{svg}
 \usepackage{listings}
 \usepackage{tikz}
+\usepackage{multicol}
 \usepackage{xifthen}
 \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
 \lstset{basicstyle=\ttfamily\footnotesize,breaklines=true}
@@ -167,7 +169,7 @@
 \input{./title.tex}
 \newpage
 
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[borderline west={3pt}{0pt}{shadecolor}, enhanced, boxrule=0pt, sharp corners, frame hidden, interior hidden, breakable]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[interior hidden, enhanced, borderline west={3pt}{0pt}{shadecolor}, frame hidden, breakable, sharp corners, boxrule=0pt]}{\end{tcolorbox}}\fi
 
 \renewcommand*\contentsname{Table of Contents}
 {
@@ -183,7 +185,8 @@
 \hypertarget{variables}{%
 \subsection{Variables}\label{variables}}
 
-\textbf{Position}
+\hypertarget{position}{%
+\subsubsection{\texorpdfstring{\textbf{Position}}{Position}}\label{position}}
 
 \begin{itemize}
 \tightlist
@@ -191,7 +194,8 @@
   Typically given by the variable \(x\)
 \end{itemize}
 
-\textbf{Time}
+\hypertarget{time}{%
+\subsubsection{\texorpdfstring{\textbf{Time}}{Time}}\label{time}}
 
 \begin{itemize}
 \tightlist
@@ -199,7 +203,8 @@
   Typically given by the variables \(t\)
 \end{itemize}
 
-\textbf{Displacement}
+\hypertarget{displacement}{%
+\subsubsection{\texorpdfstring{\textbf{Displacement}}{Displacement}}\label{displacement}}
 
 \begin{itemize}
 \tightlist
@@ -209,7 +214,8 @@
   Given by the variable \(\Delta x\)
 \end{itemize}
 
-\textbf{Distance}
+\hypertarget{distance}{%
+\subsubsection{\texorpdfstring{\textbf{Distance}}{Distance}}\label{distance}}
 
 \begin{itemize}
 \tightlist
@@ -220,7 +226,9 @@
   \(S = |x_2 - x_1| + |x_1 - x_0| + ...\)
 \end{itemize}
 
-\textbf{Average Velocity}
+\hypertarget{average-velocity}{%
+\subsubsection{\texorpdfstring{\textbf{Average
+Velocity}}{Average Velocity}}\label{average-velocity}}
 
 \begin{itemize}
 \tightlist
@@ -230,7 +238,8 @@
   \(\frac{\Delta x}{\Delta t} = V_\text{avg} = \bar{V}\)
 \end{itemize}
 
-\textbf{Velocity}
+\hypertarget{velocity}{%
+\subsubsection{\texorpdfstring{\textbf{Velocity}}{Velocity}}\label{velocity}}
 
 \begin{itemize}
 \tightlist
@@ -240,7 +249,9 @@
   \(\lim_{\Delta t \to 0} \frac{\Delta x}{\Delta t} = \frac{dx}{dt} = V\)
 \end{itemize}
 
-\textbf{Average Acceleration}
+\hypertarget{average-acceleration}{%
+\subsubsection{\texorpdfstring{\textbf{Average
+Acceleration}}{Average Acceleration}}\label{average-acceleration}}
 
 \begin{itemize}
 \tightlist
@@ -250,7 +261,8 @@
   \(\frac{\Delta V}{\Delta t} = A_\text{avg} = \bar{A}\)
 \end{itemize}
 
-\textbf{Acceleration}
+\hypertarget{acceleration}{%
+\subsubsection{\texorpdfstring{\textbf{Acceleration}}{Acceleration}}\label{acceleration}}
 
 \begin{itemize}
 \tightlist
@@ -260,12 +272,21 @@
   \(a = \lim_{\Delta t \to 0} \frac{\Delta V}{\Delta t} = \frac{dV}{dt} = \frac{d^2x}{dt^2}\)
 \end{itemize}
 
-\textbf{Speed} - \(\text{Speed} = \frac{S}{t}\) - Alternatively, when
-referring to vectors: \(\text{Speed} = ||\vec{V}||\)
+\hypertarget{speed}{%
+\subsubsection{\texorpdfstring{\textbf{Speed}}{Speed}}\label{speed}}
 
-\hypertarget{kinematics-velocity-and-position-definitions-0803-homework}{%
-\subsection{Kinematics: Velocity and Position Definitions (08/03
-Homework)}\label{kinematics-velocity-and-position-definitions-0803-homework}}
+\begin{itemize}
+\tightlist
+\item
+  \(\text{Speed} = \frac{S}{t}\)
+\item
+  Alternatively, when referring to vectors:
+  \(\text{Speed} = ||\vec{V}||\)
+\end{itemize}
+
+\hypertarget{velocity-and-position-definitions-0803-homework}{%
+\subsection{Velocity and Position Definitions (08/03
+Homework)}\label{velocity-and-position-definitions-0803-homework}}
 
 \hypertarget{problem-1}{%
 \subsubsection{Problem 1}\label{problem-1}}
@@ -479,7 +500,9 @@ except for a \(24.0\)-min rest stop. The person's average speed is
 \hypertarget{derivative-relationships}{%
 \subsection{Derivative Relationships}\label{derivative-relationships}}
 
-\textbf{Acceleration and Velocity}
+\hypertarget{acceleration-and-velocity}{%
+\subsubsection{\texorpdfstring{\textbf{Acceleration and
+Velocity}}{Acceleration and Velocity}}\label{acceleration-and-velocity}}
 
 \begin{itemize}
 \tightlist
@@ -488,7 +511,7 @@ except for a \(24.0\)-min rest stop. The person's average speed is
 \item
   \(V = \frac{dx}{dt}\)
 \item
-  \(\int{V_0}{V} dV = \int_{0}^{t} a dt\)
+  \(\int_{V_0}^{V} dV = \int_{0}^{t} a \ dt\)
 \item
   \(V\rvert_{V_0}^{V} = a\rvert_{0}^{t}\)
 \item
@@ -497,14 +520,16 @@ except for a \(24.0\)-min rest stop. The person's average speed is
   \(V = at + V_0\)
 \end{itemize}
 
-\textbf{Acceleration and Position}
+\hypertarget{acceleration-and-position}{%
+\subsubsection{\texorpdfstring{\textbf{Acceleration and
+Position}}{Acceleration and Position}}\label{acceleration-and-position}}
 
 \begin{itemize}
 \tightlist
 \item
   \(V = \frac{dx}{dt}\)
 \item
-  \(\int_{0}^{x} V dt = \int_{0}^{t} at + V_0 dt\)
+  \(\int_{0}^{x} V dt = \int_{0}^{t} at + V_0 \ dt\)
 \item
   \(x\rvert_{0}^{x} = \frac{1}{2}at^2 + V_0t\rvert_{0}^{t}\)
 \item
@@ -537,9 +562,9 @@ a &= 192
 \hypertarget{problem-1-1}{%
 \subsubsection{Problem 1}\label{problem-1-1}}
 
-A world-class sprinte rcan burst out of the blocks to essentially top
+A world-class sprinter can burst out of the blocks to essentially top
 speed (of about \(11.5\) m/s) in the first \(15.0\)m of the race. What
-is the average acceleration f this sprinter and how long does it take
+is the average acceleration of this sprinter and how long does it take
 her to reach that speed (she accelerates uniformly)?
 
 \hypertarget{problem-2-1}{%
@@ -595,6 +620,231 @@ speed of 90km/h and human reaction time of 1.0s:
 \item
   for \(a = -8.0 \text{m/s}^2\)
 \end{enumerate}
+
+\hypertarget{acceleration-definitions-0804-homework}{%
+\subsection{Acceleration Definitions (08/04
+Homework)}\label{acceleration-definitions-0804-homework}}
+
+\hypertarget{problem-1-2}{%
+\subsubsection{Problem 1}\label{problem-1-2}}
+
+A \(48.0\) g Super Ball traveling at \(29.0\) m/s bounces off a brick
+wall and rebounds at \(18.0\) m/s. A high-speed camera records this
+event. If the ball is in contact with the wall for \(4.05\) ms, what is
+the magnitude of the average acceleration of the ball during this time
+interval?
+
+\begin{itemize}
+\tightlist
+\item
+  \(a = \left|\frac{-18-29}{0.00405} = 11604.938\right|\) m/s\(^2\)
+\end{itemize}
+
+\newpage{}
+
+\hypertarget{problem-2-2}{%
+\subsubsection{Problem 2}\label{problem-2-2}}
+
+A child rolls a marble on a bent track that is 100 cm long as shown in
+the figure below. We use \(x\) to represent the position of the marble
+along the track. On the horizontal sections from \(x=0\) to \(x=20\) cm
+and from \(x=40\) to \(x=60\) cm, the marble rolls with constant speed.
+On the sloping sections, the marble's speed changes steadily. At the
+places where the slope changes, the marble stays on the track and does
+not undergo any sudden changes in speed. The child gives the marble some
+initial speed at \(x=0\) and \(t=0\) and then watches it roll to
+\(x=90\) cm, where it turns around, eventually returning to \(x=0\) with
+the same speed with which the child released it. Prepare graphs of \(x\)
+versus \(t, v_x\) versus \(t\), and \(a_x\) versus \(t\), with their
+time axes identical, to show the motion of the marble. You will not be
+able to place any numbers other than zero on the horizontal axis or on
+the velocity and acceleration axes, but show the correct graph shapes.
+
+\includegraphics{img/Acceleration Definitions HW/problem1.png}
+
+\newpage{}
+
+\begin{figure}[!htb]
+   \begin{minipage}{0.48\textwidth}
+     \centering
+     \includegraphics[width=\linewidth]{img/Acceleration Definitions HW/xversust.png}
+     \caption*{$x$ versus $t$}
+   \end{minipage}\hfill
+   \begin{minipage}{0.48\textwidth}
+     \centering
+     \includegraphics[width=\linewidth]{img/Acceleration Definitions HW/vxversust.png}
+     \caption*{$V_x$ versus $t$}
+   \end{minipage}
+\end{figure}
+
+\begin{figure}[!htb]
+\begin{center}
+   \begin{minipage}{0.48\textwidth}
+     \includegraphics[width=\linewidth]{img/Acceleration Definitions HW/axversust.png}
+     \caption*{$a_x$ versus $t$}
+  \end{minipage}\hfill
+\end{center}
+\end{figure}
+
+\newpage{}
+
+\hypertarget{problem-3-2}{%
+\subsubsection{Problem 3}\label{problem-3-2}}
+
+A particle starts from rest and accelerates as shown in the figure
+below.
+
+\includegraphics{img/Acceleration Definitions HW/problem3.png}
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\tightlist
+\item
+  Determine the particle's speed at \(t = 10.0\) s.
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  \(\int_0^{10} a \ dt = 10 \cdot 2 = 20\) m/s
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  Determine the particle's speed at \(t = 20.0\) s?
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  \(\int_0^{20} a \ dt = 10 \cdot 2 + 5 \cdot (-3) = 20 - 15 = 5\) m/s
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  Determine the distance traveled in the first \(20.0\) s. (Enter your
+  answer to one decimal places.)
+\end{enumerate}
+
+\begin{align*}
+\Delta x \text{ from 0-10 seconds: }\frac{1}{2} \cdot 2 \cdot 10^2 &= 100 \\
+\Delta x \text{ from 10-15 seconds: }20 \cdot 5 &= 100 \\
+\Delta x \text{ from 15-20 seconds: } \frac{1}{2} \cdot -3 \cdot 5^2 + 20 \cdot 5 &= 62.5 \\
+\therefore \Delta x &= 262.5 \text{ m}
+\end{align*}
+
+\hypertarget{problem-4-2}{%
+\subsubsection{Problem 4}\label{problem-4-2}}
+
+An object moves along the x axis according to the equation
+\(x = 3.25t^2 − 2.00t + 3.00\), where \(x\) is in meters and \(t\) is in
+seconds.
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\tightlist
+\item
+  Determine the average speed between \(t = 1.70\) s and \(t = 3.30\) s.
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  \(\bar{V} = \frac{x(3.30)-x(1.70)}{t_1-t_0} = \frac{(3.25(3.30)^2-2(3.30)+3) - (3.25(1.70)^2-2(1.70)+3)}{3.30-1.70} = 14.25\)
+  m/s
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  Determine the instantaneous speed at \(t = 1.70\) s.
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  \(V = \frac{dx}{dt} = 6.5(1.7)-2 = 9.05\) m/s
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  Determine the instantaneous speed at \(t = 3.30\) s.
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  \(V = \frac{dx}{dt} = 2(3.25)(3.3)-2 = 19.45\) m/s
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\setcounter{enumi}{3}
+\tightlist
+\item
+  Determine the average acceleration between \(t = 1.70 s\) and
+  \(t = 3.30\) s.
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  \(\bar{a} = \frac{V(3.30)-V(1.70)}{t_1-t_0} = \frac{(2(3.25)(3.30)-2)-(2(3.25)(1.70)-2)}{3.30-1.70} = 6.5\)
+  m/s\(^2\)
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\setcounter{enumi}{4}
+\tightlist
+\item
+  Determine the instantaneous acceleration at \(t = 1.70\) s.
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  \(a = \frac{dV}{dt} = 2(3.25) = 6.5\) m/s\(^2\)
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\setcounter{enumi}{5}
+\tightlist
+\item
+  Determine the instantaneous acceleration at \(t = 3.30\) s.
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  \(a = \frac{dV}{dt} = 2(3.25) = 6.5\) m/s\(^2\)
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\setcounter{enumi}{6}
+\tightlist
+\item
+  At what time is the object at rest?
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  0 = \(6.5t-2 \implies 0.308\) s
+\end{itemize}
 
 
 
