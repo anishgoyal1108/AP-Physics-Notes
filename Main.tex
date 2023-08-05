@@ -85,9 +85,13 @@
 \usepackage{bm}
 \usepackage{svg}
 \usepackage{listings}
+\usepackage{tikz}
 \usepackage{xifthen}
 \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
 \lstset{basicstyle=\ttfamily\footnotesize,breaklines=true}
+\newcommand\encircle[1]{%
+  \tikz[baseline=(X.base)]
+    \node (X) [draw, shape=circle, inner sep=0] {\strut #1};}
 \KOMAoption{captions}{tableheading}
 \makeatletter
 \makeatother
@@ -163,7 +167,7 @@
 \input{./title.tex}
 \newpage
 
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[boxrule=0pt, enhanced, interior hidden, borderline west={3pt}{0pt}{shadecolor}, breakable, sharp corners, frame hidden]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[borderline west={3pt}{0pt}{shadecolor}, enhanced, boxrule=0pt, sharp corners, frame hidden, interior hidden, breakable]}{\end{tcolorbox}}\fi
 
 \renewcommand*\contentsname{Table of Contents}
 {
@@ -263,6 +267,9 @@ referring to vectors: \(\text{Speed} = ||\vec{V}||\)
 \subsection{Kinematics: Velocity and Position Definitions (08/03
 Homework)}\label{kinematics-velocity-and-position-definitions-0803-homework}}
 
+\hypertarget{problem-1}{%
+\subsubsection{Problem 1}\label{problem-1}}
+
 The position versus time for a certain particle moving along the x axis
 is shown in the figure below. Find the average velocity in the following
 time intervals.
@@ -279,7 +286,7 @@ time intervals.
 \begin{itemize}
 \tightlist
 \item
-  5.000m/s
+  \(\frac{10-0}{2-0} = \frac{10}{2} = 5.000\) m/s
 \end{itemize}
 
 \begin{enumerate}
@@ -293,7 +300,7 @@ time intervals.
 \begin{itemize}
 \tightlist
 \item
-  1.250m/s
+  \(\frac{5-0}{4-0}=\frac{5}{4}=1.250\) m/s
 \end{itemize}
 
 \begin{enumerate}
@@ -307,7 +314,7 @@ time intervals.
 \begin{itemize}
 \tightlist
 \item
-  -2.500m/s
+  \(\frac{0-10}{6-2}=\frac{-10}{4}=-2.500\) m/s
 \end{itemize}
 
 \begin{enumerate}
@@ -321,7 +328,7 @@ time intervals.
 \begin{itemize}
 \tightlist
 \item
-  -1.667m/s
+  \(\frac{-5-5}{7-1}=\frac{-10}{6}=-1.667\) m/s
 \end{itemize}
 
 \begin{enumerate}
@@ -335,8 +342,139 @@ time intervals.
 \begin{itemize}
 \tightlist
 \item
-  -0.714s
+  \(\frac{-5-0}{7-0}=\frac{-5}{7}=-0.714\) s
 \end{itemize}
+
+\hypertarget{problem-2}{%
+\subsubsection{Problem 2}\label{problem-2}}
+
+A person walks first at a constant speed of \(4.80\) m/s along a
+straight line from point \encircle{$A$} to point \encircle{$B$} and then
+back along the line from \encircle{$B$} to \encircle{$A$} at a constant
+speed of \(2.90\) m/s.
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\tightlist
+\item
+  What is her average speed over the entire trip?
+\end{enumerate}
+
+\begin{align*}
+\text{Average speed} &= \frac{d_{AB}+d_{BA}}{t_{AB}+t_{BA}} \\
+d &= d_{AB} = d_{BA} \\
+t_{AB} &= \frac{d}{V_{AB}} \\
+t{BA} &= \frac{d}{V_{BA}} \\
+\therefore \text{ Average speed} &= \frac{d+d}{\frac{d}{V_{AB}}+\frac{d}{V_{BA}}} \\
+&= \frac{2d(V_{AB})(V_{BA})}{2d} \\
+&= \frac{2(V_{AB})(V_{BA})}{V_{AB}+V_{BA}} \\
+&= 2\left[\frac{(4.80)(2.90)}{4.80+2.90}\right] \\
+&= 3.615
+\end{align*}
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  What is her average velocity over the entire trip?
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  Since her displacement is 0, her average velocity is also 0.
+\end{itemize}
+
+\newpage{}
+
+\hypertarget{problem-3}{%
+\subsubsection{Problem 3}\label{problem-3}}
+
+A position-time graph for a particle moving along the x axis is shown in
+the figure below.
+
+\includegraphics{img/Kinematics Velocity and Position HW/problem3.png}
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\tightlist
+\item
+  Find the average velocity in the time interval \(t = 2.00\) s to
+  \(t = 3.50\) s.
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  \(\frac{2-6}{3.5-2}=\frac{-4}{1.5}=-2.667\) m/s
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  Determine the instantaneous velocity at \(t = 2\) s (where the tangent
+  line touches the curve) by measuring the slope of the tangent line
+  shown in the graph.
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  \(\frac{2-12}{3.5-0} = \frac{-10}{3.5} = -3.714\) m/s
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  At what value of \(t\) is the velocity zero?
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  4.000 s
+\end{itemize}
+
+\newpage{}
+
+\hypertarget{problem-4}{%
+\subsubsection{Problem 4}\label{problem-4}}
+
+A person takes a trip, driving with a constant speed of \(91.5\) km/h,
+except for a \(24.0\)-min rest stop. The person's average speed is
+\(71.6\) km/h.
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\tightlist
+\item
+  How much time is spent on the trip? \begin{align*}
+  \bar{V} &= \frac{(\text{Time driving})*V_\text{driving}}{\text{Total time}} \\
+  71.6 &= \cfrac{(t-\frac{24}{60})\cdot 91.5}{t} \\
+  71.6t &= (t-\frac{24}{60})\cdot 91.5 \\
+  \frac{71.6}{91.5}t &= t-\frac{24}{60} \\
+  \frac{71.6}{91.5}t - t &= -\frac{24}{60} \\
+  \frac{71.6}{91.5}t - \frac{91.5}{91.5}t &= -\frac{24}{60} \\
+  -\frac{19.9}{91.5}t &= -\frac{24}{60} \\
+  t &= -\frac{24}{60}\cdot -\frac{91.5}{19.9} \\
+  t &= 1.839 \text{ hours}
+  \end{align*}
+\item
+  How far does the person travel?
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  \(d = \bar{V}\cdot t = (71.6)(1.839) = 131.6\) km
+\end{itemize}
+
+\newpage{}
 
 \hypertarget{derivative-relationships}{%
 \subsection{Derivative Relationships}\label{derivative-relationships}}
@@ -396,29 +534,29 @@ a &= 192
 \subsection{Practice with 1-D Kinematic Equations
 (moderate)}\label{practice-with-1-d-kinematic-equations-moderate}}
 
-\hypertarget{problem-1}{%
-\subsubsection{Problem 1}\label{problem-1}}
+\hypertarget{problem-1-1}{%
+\subsubsection{Problem 1}\label{problem-1-1}}
 
 A world-class sprinte rcan burst out of the blocks to essentially top
 speed (of about \(11.5\) m/s) in the first \(15.0\)m of the race. What
 is the average acceleration f this sprinter and how long does it take
 her to reach that speed (she accelerates uniformly)?
 
-\hypertarget{problem-2}{%
-\subsubsection{Problem 2}\label{problem-2}}
+\hypertarget{problem-2-1}{%
+\subsubsection{Problem 2}\label{problem-2-1}}
 
 A car slows down from a speed of \(25.0\)m/s to rest in \(5.0\)s. How
 far did it travel in that time?
 
-\hypertarget{problem-3}{%
-\subsubsection{Problem 3}\label{problem-3}}
+\hypertarget{problem-3-1}{%
+\subsubsection{Problem 3}\label{problem-3-1}}
 
 In coming to a stop, a car leaves skid marks 80m long on the highway.
 Assuming a deceleration of \(7.00 \text{m/s}^2\), estimate the speed of
 the car just before braking.
 
-\hypertarget{problem-4}{%
-\subsubsection{Problem 4}\label{problem-4}}
+\hypertarget{problem-4-1}{%
+\subsubsection{Problem 4}\label{problem-4-1}}
 
 A car traveling \(45\)km/h slows down at a constant
 \(0.50 \text{m/s}^2\) just by ``letting up on the gas.'' Calculate:
