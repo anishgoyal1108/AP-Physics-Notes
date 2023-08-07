@@ -15,6 +15,7 @@ include-in-header:
   text: |
     \usepackage{amsmath, xparse}
     \usepackage{fancyvrb, fvextra}
+    \usepackage{amssymb}
     \usepackage{graphicx}
     \usepackage{bm}
     \usepackage{svg}
@@ -182,7 +183,8 @@ a &= 48(2)^2 \\
 a &= 192
 \end{align*}
 
-<<{{< pagebreak >}}>>
+{{< pagebreak >}}
+
 
 ## Practice with 1-D Kinematic Equations (moderate)
 
@@ -293,3 +295,32 @@ An object moves along the x axis according to the equation $x = 3.25t^2 − 2.00
 
 (g) At what time is the object at rest?
   - 0 = $6.5t-2 \implies 0.308$ s
+
+{{< pagebreak >}}
+
+## Velocity-Acceleration Relationships
+- If acceleration is constant, $\frac{\mathrm{d}a}{\mathrm{d}t} = 0$
+  - And as long as acceleration remains constant, and $V_0$ and $t_0$ are 0, $\bar{V} = \frac{1}{2}(V_0 + V_f)$
+- If acceleration is constant, but either $V_0$ or $t_0$ are not 0, $X = V_0t + \frac{1}{2}V_ft-\frac{1}{2}V_0t_0$
+
+### Phab Four
+1. $V_f = V_0 + at$
+2. $t = \frac{1}{2}t(V_0 + V_f)$
+3. $x = V_0t + \frac{1}{2}at^2$
+4. $V_f^2 = V_0^2 + 2ax$
+
+| Phab Four                | `V_0` | `V_f` | `a` | `t` | `x` |
+|----------------------------------|-------|-------|-----|-----|-----|
+| $V_f = V_0 + at$                 |   \checkmark   |   \checkmark   |  \checkmark  |  \checkmark  |     |
+| $t = \frac{1}{2}(V_0 + V_f)$     |   \checkmark   |   \checkmark   |     |  \checkmark  |     |
+| $x = V_0t + \frac{1}{2}at^2$     |   \checkmark   |       |  \checkmark  |  \checkmark  |  \checkmark  |
+| $V_f^2 = V_0^2 + 2ax$            |   \checkmark   |   \checkmark   |  \checkmark  |     |  \checkmark  |
+
+### What if $V_0$ isn't given?
+- Simply use the equation $x = V_ft-\frac{1}{2}at^2$
+  - This will rarely show up, if ever.
+
+### What if time and/or starting distance are not 0?
+- Time and distance are actually *deltas* (i.e. $\Delta t$ and $\Delta x$)
+- So you have to subtract the initial time and distance from the final time and distance
+  - Example: $x-x_0 = V_0(t-t_0) + \frac{1}{2}a(t-t_0)^2$
