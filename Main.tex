@@ -169,7 +169,7 @@
 \input{./title.tex}
 \newpage
 
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[interior hidden, enhanced, borderline west={3pt}{0pt}{shadecolor}, frame hidden, breakable, sharp corners, boxrule=0pt]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[enhanced, borderline west={3pt}{0pt}{shadecolor}, breakable, interior hidden, sharp corners, boxrule=0pt, frame hidden]}{\end{tcolorbox}}\fi
 
 \renewcommand*\contentsname{Table of Contents}
 {
@@ -186,7 +186,7 @@
 \subsection{Variables}\label{variables}}
 
 \hypertarget{position}{%
-\subsubsection{\texorpdfstring{\textbf{Position}}{Position}}\label{position}}
+\subsubsection{Position}\label{position}}
 
 \begin{itemize}
 \tightlist
@@ -195,7 +195,7 @@
 \end{itemize}
 
 \hypertarget{time}{%
-\subsubsection{\texorpdfstring{\textbf{Time}}{Time}}\label{time}}
+\subsubsection{Time}\label{time}}
 
 \begin{itemize}
 \tightlist
@@ -204,7 +204,7 @@
 \end{itemize}
 
 \hypertarget{displacement}{%
-\subsubsection{\texorpdfstring{\textbf{Displacement}}{Displacement}}\label{displacement}}
+\subsubsection{Displacement}\label{displacement}}
 
 \begin{itemize}
 \tightlist
@@ -215,7 +215,7 @@
 \end{itemize}
 
 \hypertarget{distance}{%
-\subsubsection{\texorpdfstring{\textbf{Distance}}{Distance}}\label{distance}}
+\subsubsection{Distance}\label{distance}}
 
 \begin{itemize}
 \tightlist
@@ -227,8 +227,7 @@
 \end{itemize}
 
 \hypertarget{average-velocity}{%
-\subsubsection{\texorpdfstring{\textbf{Average
-Velocity}}{Average Velocity}}\label{average-velocity}}
+\subsubsection{Average Velocity}\label{average-velocity}}
 
 \begin{itemize}
 \tightlist
@@ -239,7 +238,7 @@ Velocity}}{Average Velocity}}\label{average-velocity}}
 \end{itemize}
 
 \hypertarget{velocity}{%
-\subsubsection{\texorpdfstring{\textbf{Velocity}}{Velocity}}\label{velocity}}
+\subsubsection{Velocity}\label{velocity}}
 
 \begin{itemize}
 \tightlist
@@ -250,8 +249,7 @@ Velocity}}{Average Velocity}}\label{average-velocity}}
 \end{itemize}
 
 \hypertarget{average-acceleration}{%
-\subsubsection{\texorpdfstring{\textbf{Average
-Acceleration}}{Average Acceleration}}\label{average-acceleration}}
+\subsubsection{Average Acceleration}\label{average-acceleration}}
 
 \begin{itemize}
 \tightlist
@@ -262,7 +260,7 @@ Acceleration}}{Average Acceleration}}\label{average-acceleration}}
 \end{itemize}
 
 \hypertarget{acceleration}{%
-\subsubsection{\texorpdfstring{\textbf{Acceleration}}{Acceleration}}\label{acceleration}}
+\subsubsection{Acceleration}\label{acceleration}}
 
 \begin{itemize}
 \tightlist
@@ -273,7 +271,7 @@ Acceleration}}{Average Acceleration}}\label{average-acceleration}}
 \end{itemize}
 
 \hypertarget{speed}{%
-\subsubsection{\texorpdfstring{\textbf{Speed}}{Speed}}\label{speed}}
+\subsubsection{Speed}\label{speed}}
 
 \begin{itemize}
 \tightlist
@@ -365,6 +363,8 @@ time intervals.
 \item
   \(\frac{-5-0}{7-0}=\frac{-5}{7}=-0.714\) s
 \end{itemize}
+
+\newpage{}
 
 \hypertarget{problem-2}{%
 \subsubsection{Problem 2}\label{problem-2}}
@@ -501,8 +501,8 @@ except for a \(24.0\)-min rest stop. The person's average speed is
 \subsection{Derivative Relationships}\label{derivative-relationships}}
 
 \hypertarget{acceleration-and-velocity}{%
-\subsubsection{\texorpdfstring{\textbf{Acceleration and
-Velocity}}{Acceleration and Velocity}}\label{acceleration-and-velocity}}
+\subsubsection{Acceleration and
+Velocity}\label{acceleration-and-velocity}}
 
 \begin{itemize}
 \tightlist
@@ -511,27 +511,17 @@ Velocity}}{Acceleration and Velocity}}\label{acceleration-and-velocity}}
 \item
   \(V = \frac{dx}{dt}\)
 \item
-  \(\int_{V_0}^{V} dV = \int_{0}^{t} a \ dt\)
-\item
-  \(V\rvert_{V_0}^{V} = a\rvert_{0}^{t}\)
-\item
-  \(V - V_0 = at\)
-\item
   \(V = at + V_0\)
 \end{itemize}
 
 \hypertarget{acceleration-and-position}{%
-\subsubsection{\texorpdfstring{\textbf{Acceleration and
-Position}}{Acceleration and Position}}\label{acceleration-and-position}}
+\subsubsection{Acceleration and
+Position}\label{acceleration-and-position}}
 
 \begin{itemize}
 \tightlist
 \item
   \(V = \frac{dx}{dt}\)
-\item
-  \(\int_{0}^{x} V dt = \int_{0}^{t} at + V_0 \ dt\)
-\item
-  \(x\rvert_{0}^{x} = \frac{1}{2}at^2 + V_0t\rvert_{0}^{t}\)
 \item
   \(x = \frac{1}{2}at^2 + V_0t\)
 \end{itemize}
@@ -554,6 +544,8 @@ Position}}{Acceleration and Position}}\label{acceleration-and-position}}
 a &= 48(2)^2 \\
 a &= 192
 \end{align*}
+
+\textless\textless{}\newpage{}\textgreater\textgreater{}
 
 \hypertarget{practice-with-1-d-kinematic-equations-moderate}{%
 \subsection{Practice with 1-D Kinematic Equations
@@ -706,7 +698,7 @@ below.
 \begin{itemize}
 \tightlist
 \item
-  \(\int_0^{10} a \ dt = 10 \cdot 2 = 20\) m/s
+  \(\int_0^{10} a \ \mathrm{d}t = 10 \cdot 2 = 20\) m/s
 \end{itemize}
 
 \begin{enumerate}
@@ -720,7 +712,8 @@ below.
 \begin{itemize}
 \tightlist
 \item
-  \(\int_0^{20} a \ dt = 10 \cdot 2 + 5 \cdot (-3) = 20 - 15 = 5\) m/s
+  \(\int_0^{20} a \ \mathrm{d}t = 10 \cdot 2 + 5 \cdot (-3) = 20 - 15 = 5\)
+  m/s
 \end{itemize}
 
 \begin{enumerate}

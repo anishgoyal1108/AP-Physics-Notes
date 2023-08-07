@@ -39,45 +39,45 @@ include-before-body:
 # Kinematics
 
 ## Variables
-### **Position**
+### Position
 
 - Typically given by the variable $x$
 
-### **Time**
+### Time
 
 - Typically given by the variables $t$
 
-### **Displacement**
+### Displacement
 
 - Defined as the change in position ($X_f - X_i$)
 - Given by the variable $\Delta x$
 
-### **Distance**
+### Distance
 
 - You have to take the magnitude of vectors for every time you change position
 - $S = |x_2 - x_1| + |x_1 - x_0| + ...$
 
-### **Average Velocity**
+### Average Velocity
 
 - Defined as the change in displacement over time
 - $\frac{\Delta x}{\Delta t} = V_\text{avg} = \bar{V}$
 
-### **Velocity**
+### Velocity
 
 - Defined as the change in displacement as time approaches 0
 - $\lim_{\Delta t \to 0} \frac{\Delta x}{\Delta t} = \frac{dx}{dt} = V$
 
-### **Average Acceleration**
+### Average Acceleration
 
 - Defined as the change in velocity over time
 - $\frac{\Delta V}{\Delta t} = A_\text{avg} = \bar{A}$
 
-### **Acceleration**
+### Acceleration
 
 - Defined as the change in velocity as time approaches 0
 - $a = \lim_{\Delta t \to 0} \frac{\Delta V}{\Delta t} = \frac{dV}{dt} = \frac{d^2x}{dt^2}$
 
-### **Speed**
+### Speed
 - $\text{Speed} = \frac{S}{t}$
 - Alternatively, when referring to vectors: $\text{Speed} = ||\vec{V}||$
 
@@ -97,6 +97,8 @@ The position versus time for a certain particle moving along the x axis is shown
   - $\frac{-5-5}{7-1}=\frac{-10}{6}=-1.667$ m/s
 (e) 0 to 7s
   - $\frac{-5-0}{7-0}=\frac{-5}{7}=-0.714$ s
+
+{{< pagebreak >}}
 
 ### Problem 2
 A person walks first at a constant speed of $4.80$ m/s along a straight line from point \encircle{$A$} to point \encircle{$B$} and then back along the line from \encircle{$B$} to \encircle{$A$} at a constant speed of $2.90$ m/s. 
@@ -156,20 +158,15 @@ t &= 1.839 \text{ hours}
 
 ## Derivative Relationships
 
-### **Acceleration and Velocity**
+### Acceleration and Velocity
 
 - $a = \frac{dV}{dt}$
 - $V = \frac{dx}{dt}$
-- $\int_{V_0}^{V} dV = \int_{0}^{t} a \ dt$
-- $V\rvert_{V_0}^{V} = a\rvert_{0}^{t}$
-- $V - V_0 = at$
 - $V = at + V_0$
 
-### **Acceleration and Position**
+### Acceleration and Position
 
 - $V = \frac{dx}{dt}$
-- $\int_{0}^{x} V dt = \int_{0}^{t} at + V_0 \ dt$
-- $x\rvert_{0}^{x} = \frac{1}{2}at^2 + V_0t\rvert_{0}^{t}$
 - $x = \frac{1}{2}at^2 + V_0t$
 
 *If initial time or position is not zero:*
@@ -184,6 +181,8 @@ t &= 1.839 \text{ hours}
 a &= 48(2)^2 \\
 a &= 192
 \end{align*}
+
+<<{{< pagebreak >}}>>
 
 ## Practice with 1-D Kinematic Equations (moderate)
 
@@ -259,9 +258,9 @@ A particle starts from rest and accelerates as shown in the figure below.
 ![](img/Acceleration%20Definitions%20HW/problem3.png)
 
 (a) Determine the particle's speed at $t = 10.0$ s.
-  - $\int_0^{10} a \ dt = 10 \cdot 2 = 20$ m/s
+  - $\int_0^{10} a \ \mathrm{d}t = 10 \cdot 2 = 20$ m/s
 (b) Determine the particle's speed at $t = 20.0$ s?
-  - $\int_0^{20} a \ dt = 10 \cdot 2 + 5 \cdot (-3) = 20 - 15 = 5$ m/s
+  - $\int_0^{20} a \ \mathrm{d}t = 10 \cdot 2 + 5 \cdot (-3) = 20 - 15 = 5$ m/s
 (c) Determine the distance traveled in the first $20.0$ s. (Enter your answer to one decimal places.)
 
 \begin{align*}
