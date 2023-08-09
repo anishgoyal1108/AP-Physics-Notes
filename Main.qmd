@@ -308,7 +308,7 @@ An object moves along the x axis according to the equation $x = 3.25t^2 − 2.00
 3. $x = V_0t + \frac{1}{2}at^2$
 4. $V_f^2 = V_0^2 + 2ax$
 
-| Phab Four                | `V_0` | `V_f` | `a` | `t` | `x` |
+| Phab Four                | $V_0$ | $V_f$ | $a$ | $t$ | $x$ |
 |----------------------------------|-------|-------|-----|-----|-----|
 | $V_f = V_0 + at$                 |   \checkmark   |   \checkmark   |  \checkmark  |  \checkmark  |     |
 | $t = \frac{1}{2}(V_0 + V_f)$     |   \checkmark   |   \checkmark   |     |  \checkmark  |     |
