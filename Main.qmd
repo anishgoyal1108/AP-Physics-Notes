@@ -409,3 +409,69 @@ v &= \left(-4.20\cdot 10^7\right)(0.002738)^2+\left(2.30\cdot 10^5\right)(0.0027
 x &= \frac{\left(-4.20\cdot 10^7\right)(0.002738)^3}{3}+\frac{\left(2.30\cdot 10^5\right)(0.002738)^2}{2} \\
 &= 0.575 \text{ m}
 \end{align*}
+
+## Free Fall Review
+- Allegedly discovered by Galileo on the Leaning Tower of Pisa
+- An object is considered "in free fall" if the only force acting on it is gravity
+- The phab four equation that you will probably use the most for free fall equations, given time and initial velocity, is $x = V_0t + \frac{1}{2}at^2$
+  - If time isn't given, you would use $V_f^2 = V_0^2 + 2ax$ instead
+
+## Vectors Review
+Vectors have [magnitude]{.underline} and [direction]{.underline}
+
+### Vector-Scalar Multiplication
+- You can multiply scalar values to vectors, which changes the vector's magnitude by a factor of the scalar value, but not its direction
+- Example: $2\vec{V}$ would double the magnitude of the resultant vector
+
+### Vector Addition
+- Vector addition is commutative
+- Two methods:
+  - Head to tail method
+    - Lining up the head of the first vector to the tail of the second vector and drawing the resultant vector from the tail of the first vector to the head of the second vector
+  - Parallelogram method
+    - Drawing the two vectors as a parallelogram and drawing the resultant vector from the intersecting points
+
+![](img/vector-addition-methods.png)
+
+### Vector Subtraction
+- The same as vector addition, but you flip the direction of the vector you are subtracting
+
+### Components of Vectors
+- You can easily break down 2D vectors into their $x$ and $y$ components
+  - $\vec{V}_x = ||\vec{V}||\cos\theta$
+  - $\vec{V}_y = ||\vec{V}||\sin\theta$
+
+#### What if I don't know $\theta$ or $||\vec{V}||$?
+Well, you can easily figure that out with some trig:
+
+- $||\vec{V}|| = \sqrt{\vec{V}_x^2 + \vec{V}_y^2}$
+- $\theta = \tan^{-1}\left(\frac{\vec{V}_y}{\vec{V}_x}\right)$ 
+
+![](img/components-vector.png)
+
+### Unit Vectors
+- A \textbf{unit vector} is any vector with a magnitude of 1
+- If you take the vector (cross) product of the unit vectors in the $x$ and $y$ direction, the resultant vector will be the same in the $z$ direction
+  - $\hat{i} \times \hat{j} = \hat{k}$
+
+### Unit Vector Notation
+- You can represent a vector in unit vector notation by multiplying the unit vectors by their respective components:
+  - $\vec{V} = V_x\hat{i} + V_y\hat{j} + V_z\hat{k}$
+- You can also add two vectors in unit vector notation as follows:
+  - $\vec{V} + \vec{W} = (V_x + W_x)\hat{i} + (V_y + W_y)\hat{j} + (V_z + W_z)\hat{k}$
+- You can also represent a vector in unit vector notation by multiplying the unit vectors by their respective magnitudes and the cosine of the angle between the vector and the unit vector
+  - For example: $\vec{V} = ||\vec{V}||\cos\theta\hat{i} + ||\vec{V}||\cos\theta\hat{j} + ||\vec{V}||\cos\theta\hat{k}$
+
+### Unit Vectors to Find Position
+You can use unit vectors to find the position of a vector:
+\begin{align*}
+\vec{r} &= r_x\hat{i} + r_y\hat{j} + r_z\hat{k} \\
+\vec{v} &= \frac{\mathrm{d}\vec{r}}{\mathrm{d}{t}} = \frac{\mathrm{d}}{\mathrm{d}{t}}(r_x\hat{i}) + \frac{\mathrm{d}}{\mathrm{d}{t}}(r_y\hat{j}) + \frac{\mathrm{d}}{\mathrm{d}{t}}(r_z\hat{k}) \\
+&= \frac{\mathrm{d}r_x}{\mathrm{d}t}\hat{i} + \frac{\mathrm{d}r_y}{\mathrm{d}t}\hat{j} + \frac{\mathrm{d}r_z}{\mathrm{d}t}\hat{k} \\
+\end{align*}
+
+#### Why does this work?
+Remember that the derivative of a constant is 0, and $\hat{i}, \hat{j}, \hat{k}$ are constants:
+\begin{align*}
+\frac{\mathrm{d}}{\mathrm{d}t}(r_x\hat{i}) = \frac{\mathrm{d}r_x}{\mathrm{d}t}\hat{i} + r_x\frac{\mathrm{d}\hat{i}}{\mathrm{d}t}
+\end{align*}

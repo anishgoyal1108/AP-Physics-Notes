@@ -42,6 +42,7 @@
   \KOMAoptions{parskip=half}}
 \makeatother
 \usepackage{xcolor}
+\usepackage{soul}
 \setlength{\emergencystretch}{3em} % prevent overfull lines
 \setcounter{secnumdepth}{5}
 % Make \paragraph and \subparagraph free-standing
@@ -170,7 +171,7 @@
 \input{./title.tex}
 \newpage
 
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[sharp corners, boxrule=0pt, breakable, borderline west={3pt}{0pt}{shadecolor}, enhanced, frame hidden, interior hidden]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[interior hidden, borderline west={3pt}{0pt}{shadecolor}, sharp corners, boxrule=0pt, breakable, enhanced, frame hidden]}{\end{tcolorbox}}\fi
 
 \renewcommand*\contentsname{Table of Contents}
 {
@@ -723,15 +724,13 @@ below.
 \tightlist
 \item
   Determine the distance traveled in the first \(20.0\) s. (Enter your
-  answer to one decimal places.)
+  answer to one decimal places.) \begin{align*}
+  \Delta x \text{ from 0-10 seconds: }\frac{1}{2} \cdot 2 \cdot 10^2 &= 100 \\
+  \Delta x \text{ from 10-15 seconds: }20 \cdot 5 &= 100 \\
+  \Delta x \text{ from 15-20 seconds: } \frac{1}{2} \cdot -3 \cdot 5^2 + 20 \cdot 5 &= 62.5 \\
+  \therefore \Delta x &= 262.5 \text{ m}
+  \end{align*}
 \end{enumerate}
-
-\begin{align*}
-\Delta x \text{ from 0-10 seconds: }\frac{1}{2} \cdot 2 \cdot 10^2 &= 100 \\
-\Delta x \text{ from 10-15 seconds: }20 \cdot 5 &= 100 \\
-\Delta x \text{ from 15-20 seconds: } \frac{1}{2} \cdot -3 \cdot 5^2 + 20 \cdot 5 &= 62.5 \\
-\therefore \Delta x &= 262.5 \text{ m}
-\end{align*}
 
 \hypertarget{problem-4-2}{%
 \subsubsection{Problem 4}\label{problem-4-2}}
@@ -976,40 +975,23 @@ the ground.
 \begin{enumerate}
 \def\labelenumi{(\alph{enumi})}
 \setcounter{enumi}{1}
-\tightlist
 \item
   If so, what is its speed at the top? If not, what initial speed must
-  it have to reach the top?
-\end{enumerate}
-
-\begin{align*}
-  V_f^2 &= 8^2 + 2(-9.81)(3.6-1.6) \\
-  V_f^2 = 64 - 39.24 \\
-  V_f &= \sqrt{24.76} \\
-  &= 4.976 \text{ m/s}
-  \end{align*}
-
-\begin{enumerate}
-\def\labelenumi{(\alph{enumi})}
-\setcounter{enumi}{2}
-\tightlist
+  it have to reach the top? \begin{align*}
+    V_f^2 &= 8^2 + 2(-9.81)(3.6-1.6) \\
+    V_f^2 = 64 - 39.24 \\
+    V_f &= \sqrt{24.76} \\
+    &= 4.976 \text{ m/s}
+    \end{align*}
 \item
   Find the change in speed of a rock thrown straight down from the top
   of the wall at an initial speed of \(8.00\) m/s and moving between the
-  same two points.
-\end{enumerate}
-
-\begin{align*}
-  V_f^2 &= 8^2 + 2(-9.81)(1.6-3.6) \\
-  V_f^2 = 64 + 39.24 \\
-  V_f &= \sqrt{103.24} \\
-  &= 10.161 \text{ m/s}
-  \end{align*}
-
-\begin{enumerate}
-\def\labelenumi{(\alph{enumi})}
-\setcounter{enumi}{3}
-\tightlist
+  same two points. \begin{align*}
+    V_f^2 &= 8^2 + 2(-9.81)(1.6-3.6) \\
+    V_f^2 = 64 + 39.24 \\
+    V_f &= \sqrt{103.24} \\
+    &= 10.161 \text{ m/s}
+    \end{align*}
 \item
   Does the change in speed of the downward-moving rock agree with the
   magnitude of the speed change of the rock moving upward between the
@@ -1049,31 +1031,20 @@ It is possible to shoot an arrow at a speed as high as 122 m/s.
 
 \begin{enumerate}
 \def\labelenumi{(\alph{enumi})}
-\tightlist
 \item
   If friction is neglected, how high would an arrow launched at this
-  speed rise if shot straight up?
-\end{enumerate}
-
-\begin{align*}
-0 &= 122^2 + 2(-9.81)x \\
--14884 &= -19.62x \\
-x &= 758.614 \text{ m}
-\end{align*}
-
-\begin{enumerate}
-\def\labelenumi{(\alph{enumi})}
-\setcounter{enumi}{1}
-\tightlist
+  speed rise if shot straight up? \begin{align*}
+  0 &= 122^2 + 2(-9.81)x \\
+  -14884 &= -19.62x \\
+  x &= 758.614 \text{ m}
+  \end{align*}
 \item
-  How long would the arrow be in the air?
+  How long would the arrow be in the air? \begin{align*}
+  758.614 &= 122t + \frac{1}{2}(9.81)t^2 \\
+  0 &= -4.905t^2 + 122t - 758.614 \\
+  t &= 24.873 \text{ s}
+  \end{align*}
 \end{enumerate}
-
-\begin{align*}
-758.614 &= 122t + \frac{1}{2}(9.81)t^2 \\
-0 &= -4.905t^2 + 122t - 758.614 \\
-t &= 24.873 \text{ s}
-\end{align*}
 
 \hypertarget{problem-3-3}{%
 \subsubsection{Problem 3}\label{problem-3-3}}
@@ -1081,9 +1052,7 @@ t &= 24.873 \text{ s}
 The height of a helicopter above the ground is given by \(h = 3.10t^3\),
 where \(h\) is in meters and \(t\) is in seconds. At \(t = 1.90\) s, the
 helicopter releases a small mailbag. How long after its release does the
-mailbag reach the ground?
-
-\begin{align*}
+mailbag reach the ground? \begin{align*}
 x &= 3.10 \cdot 1.9^3 \\ 
 &= 21.2629 \\
 V_0 = 9.30 \cdot 1.9^2 \\
@@ -1135,12 +1104,204 @@ bullet just as it leaves the barrel is zero.
   &= 312 \text{ m/s}
   \end{align*}
 \item
-  What is the length of the barrel?
+  What is the length of the barrel? \begin{align*}
+  x &= \frac{\left(-4.20\cdot 10^7\right)(0.002738)^3}{3}+\frac{\left(2.30\cdot 10^5\right)(0.002738)^2}{2} \\
+  &= 0.575 \text{ m}
+  \end{align*}
 \end{enumerate}
 
+\hypertarget{free-fall-review}{%
+\subsection{Free Fall Review}\label{free-fall-review}}
+
+\begin{itemize}
+\tightlist
+\item
+  Allegedly discovered by Galileo on the Leaning Tower of Pisa
+\item
+  An object is considered ``in free fall'' if the only force acting on
+  it is gravity
+\item
+  The phab four equation that you will probably use the most for free
+  fall equations, given time and initial velocity, is
+  \(x = V_0t + \frac{1}{2}at^2\)
+
+  \begin{itemize}
+  \tightlist
+  \item
+    If time isn't given, you would use \(V_f^2 = V_0^2 + 2ax\) instead
+  \end{itemize}
+\end{itemize}
+
+\hypertarget{vectors-review}{%
+\subsection{Vectors Review}\label{vectors-review}}
+
+Vectors have \ul{magnitude} and \ul{direction}
+
+\hypertarget{vector-scalar-multiplication}{%
+\subsubsection{Vector-Scalar
+Multiplication}\label{vector-scalar-multiplication}}
+
+\begin{itemize}
+\tightlist
+\item
+  You can multiply scalar values to vectors, which changes the vector's
+  magnitude by a factor of the scalar value, but not its direction
+\item
+  Example: \(2\vec{V}\) would double the magnitude of the resultant
+  vector
+\end{itemize}
+
+\hypertarget{vector-addition}{%
+\subsubsection{Vector Addition}\label{vector-addition}}
+
+\begin{itemize}
+\tightlist
+\item
+  Vector addition is commutative
+\item
+  Two methods:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Head to tail method
+
+    \begin{itemize}
+    \tightlist
+    \item
+      Lining up the head of the first vector to the tail of the second
+      vector and drawing the resultant vector from the tail of the first
+      vector to the head of the second vector
+    \end{itemize}
+  \item
+    Parallelogram method
+
+    \begin{itemize}
+    \tightlist
+    \item
+      Drawing the two vectors as a parallelogram and drawing the
+      resultant vector from the intersecting points
+    \end{itemize}
+  \end{itemize}
+\end{itemize}
+
+\includegraphics{img/vector-addition-methods.png}
+
+\hypertarget{vector-subtraction}{%
+\subsubsection{Vector Subtraction}\label{vector-subtraction}}
+
+\begin{itemize}
+\tightlist
+\item
+  The same as vector addition, but you flip the direction of the vector
+  you are subtracting
+\end{itemize}
+
+\hypertarget{components-of-vectors}{%
+\subsubsection{Components of Vectors}\label{components-of-vectors}}
+
+\begin{itemize}
+\tightlist
+\item
+  You can easily break down 2D vectors into their \(x\) and \(y\)
+  components
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \(\vec{V}_x = ||\vec{V}||\cos\theta\)
+  \item
+    \(\vec{V}_y = ||\vec{V}||\sin\theta\)
+  \end{itemize}
+\end{itemize}
+
+\hypertarget{what-if-i-dont-know-theta-or-vecv}{%
+\paragraph{\texorpdfstring{What if I don't know \(\theta\) or
+\(||\vec{V}||\)?}{What if I don't know \textbackslash theta or \textbar\textbar\textbackslash vec\{V\}\textbar\textbar?}}\label{what-if-i-dont-know-theta-or-vecv}}
+
+Well, you can easily figure that out with some trig:
+
+\begin{itemize}
+\tightlist
+\item
+  \(||\vec{V}|| = \sqrt{\vec{V}_x^2 + \vec{V}_y^2}\)
+\item
+  \(\theta = \tan^{-1}\left(\frac{\vec{V}_y}{\vec{V}_x}\right)\)
+\end{itemize}
+
+\includegraphics{img/components-vector.png}
+
+\hypertarget{unit-vectors}{%
+\subsubsection{Unit Vectors}\label{unit-vectors}}
+
+\begin{itemize}
+\tightlist
+\item
+  A \textbf{unit vector} is any vector with a magnitude of 1
+\item
+  If you take the vector (cross) product of the unit vectors in the
+  \(x\) and \(y\) direction, the resultant vector will be the same in
+  the \(z\) direction
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \(\hat{i} \times \hat{j} = \hat{k}\)
+  \end{itemize}
+\end{itemize}
+
+\hypertarget{unit-vector-notation}{%
+\subsubsection{Unit Vector Notation}\label{unit-vector-notation}}
+
+\begin{itemize}
+\tightlist
+\item
+  You can represent a vector in unit vector notation by multiplying the
+  unit vectors by their respective components:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \(\vec{V} = V_x\hat{i} + V_y\hat{j} + V_z\hat{k}\)
+  \end{itemize}
+\item
+  You can also add two vectors in unit vector notation as follows:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \(\vec{V} + \vec{W} = (V_x + W_x)\hat{i} + (V_y + W_y)\hat{j} + (V_z + W_z)\hat{k}\)
+  \end{itemize}
+\item
+  You can also represent a vector in unit vector notation by multiplying
+  the unit vectors by their respective magnitudes and the cosine of the
+  angle between the vector and the unit vector
+
+  \begin{itemize}
+  \tightlist
+  \item
+    For example:
+    \(\vec{V} = ||\vec{V}||\cos\theta\hat{i} + ||\vec{V}||\cos\theta\hat{j} + ||\vec{V}||\cos\theta\hat{k}\)
+  \end{itemize}
+\end{itemize}
+
+\hypertarget{unit-vectors-to-find-position}{%
+\subsubsection{Unit Vectors to Find
+Position}\label{unit-vectors-to-find-position}}
+
+You can use unit vectors to find the position of a vector:
 \begin{align*}
-x &= \frac{\left(-4.20\cdot 10^7\right)(0.002738)^3}{3}+\frac{\left(2.30\cdot 10^5\right)(0.002738)^2}{2} \\
-&= 0.575 \text{ m}
+\vec{r} &= r_x\hat{i} + r_y\hat{j} + r_z\hat{k} \\
+\vec{v} &= \frac{\mathrm{d}\vec{r}}{\mathrm{d}{t}} = \frac{\mathrm{d}}{\mathrm{d}{t}}(r_x\hat{i}) + \frac{\mathrm{d}}{\mathrm{d}{t}}(r_y\hat{j}) + \frac{\mathrm{d}}{\mathrm{d}{t}}(r_z\hat{k}) \\
+&= \frac{\mathrm{d}r_x}{\mathrm{d}t}\hat{i} + \frac{\mathrm{d}r_y}{\mathrm{d}t}\hat{j} + \frac{\mathrm{d}r_z}{\mathrm{d}t}\hat{k} \\
+\end{align*}
+
+\hypertarget{why-does-this-work}{%
+\paragraph{Why does this work?}\label{why-does-this-work}}
+
+Remember that the derivative of a constant is 0\ldots{} and
+\(\hat{i}, \hat{j}, \hat{k}\) are constants: \begin{align*}
+\frac{\mathrm{d}}{\mathrm{d}t}(r_x\hat{i}) = \frac{\mathrm{d}r_x}{\mathrm{d}t}\hat{i} + r_x\frac{\mathrm{d}\hat{i}}{\mathrm{d}t}
 \end{align*}
 
 
