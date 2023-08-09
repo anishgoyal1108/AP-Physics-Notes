@@ -170,7 +170,7 @@
 \input{./title.tex}
 \newpage
 
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[interior hidden, borderline west={3pt}{0pt}{shadecolor}, enhanced, boxrule=0pt, breakable, frame hidden, sharp corners]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[sharp corners, boxrule=0pt, breakable, borderline west={3pt}{0pt}{shadecolor}, enhanced, frame hidden, interior hidden]}{\end{tcolorbox}}\fi
 
 \renewcommand*\contentsname{Table of Contents}
 {
@@ -948,6 +948,200 @@ given?}{What if V\_0 isn't given?}}\label{what-if-v_0-isnt-given}}
     Example: \(x-x_0 = V_0(t-t_0) + \frac{1}{2}a(t-t_0)^2\)
   \end{itemize}
 \end{itemize}
+
+\hypertarget{freefall-and-calculus-0808-homework}{%
+\subsection{Freefall and Calculus (08/08
+Homework)}\label{freefall-and-calculus-0808-homework}}
+
+\hypertarget{problem-1-3}{%
+\subsubsection{Problem 1}\label{problem-1-3}}
+
+An attacker at the base of a castle wall \(3.60\) m high throws a rock
+straight up with speed \(8.00\) m/s from a height of \(1.60\) m above
+the ground.
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\tightlist
+\item
+  Will the rock reach the top of the wall?
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  Yes, because the result from part b is not imaginary.
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  If so, what is its speed at the top? If not, what initial speed must
+  it have to reach the top?
+\end{enumerate}
+
+\begin{align*}
+  V_f^2 &= 8^2 + 2(-9.81)(3.6-1.6) \\
+  V_f^2 = 64 - 39.24 \\
+  V_f &= \sqrt{24.76} \\
+  &= 4.976 \text{ m/s}
+  \end{align*}
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  Find the change in speed of a rock thrown straight down from the top
+  of the wall at an initial speed of \(8.00\) m/s and moving between the
+  same two points.
+\end{enumerate}
+
+\begin{align*}
+  V_f^2 &= 8^2 + 2(-9.81)(1.6-3.6) \\
+  V_f^2 = 64 + 39.24 \\
+  V_f &= \sqrt{103.24} \\
+  &= 10.161 \text{ m/s}
+  \end{align*}
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\setcounter{enumi}{3}
+\tightlist
+\item
+  Does the change in speed of the downward-moving rock agree with the
+  magnitude of the speed change of the rock moving upward between the
+  same elevations?
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  No.
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\setcounter{enumi}{4}
+\tightlist
+\item
+  Explain physically why it does or does not agree.
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  The initial velocity when the ball up is sent up is acting against
+  acceleration due to gravity, whereas the initial velocity when you
+  send the ball back down is acting with acceleration due to gravity.
+  And this is important to note because the ball spends less time to
+  reach the ground than the time it takes to halt in the air when thrown
+  upward. And therefore, the delta V's for both are not going to remain
+  consistent since the times are not the same.
+\end{itemize}
+
+\hypertarget{problem-2-3}{%
+\subsubsection{Problem 2}\label{problem-2-3}}
+
+It is possible to shoot an arrow at a speed as high as 122 m/s.
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\tightlist
+\item
+  If friction is neglected, how high would an arrow launched at this
+  speed rise if shot straight up?
+\end{enumerate}
+
+\begin{align*}
+0 &= 122^2 + 2(-9.81)x \\
+-14884 &= -19.62x \\
+x &= 758.614 \text{ m}
+\end{align*}
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  How long would the arrow be in the air?
+\end{enumerate}
+
+\begin{align*}
+758.614 &= 122t + \frac{1}{2}(9.81)t^2 \\
+0 &= -4.905t^2 + 122t - 758.614 \\
+t &= 24.873 \text{ s}
+\end{align*}
+
+\hypertarget{problem-3-3}{%
+\subsubsection{Problem 3}\label{problem-3-3}}
+
+The height of a helicopter above the ground is given by \(h = 3.10t^3\),
+where \(h\) is in meters and \(t\) is in seconds. At \(t = 1.90\) s, the
+helicopter releases a small mailbag. How long after its release does the
+mailbag reach the ground?
+
+\begin{align*}
+x &= 3.10 \cdot 1.9^3 \\ 
+&= 21.2629 \\
+V_0 = 9.30 \cdot 1.9^2 \\
+&= 33.573 \\
+-21.2629 &= 33.573t + \frac{1}{2}(-9.81)t^2 \\
+0 &= -4.905t^2 + 33.573t + 21.2629 \\
+t &= 7.428 \text{ s}
+\end{align*}
+
+\hypertarget{problem-4-3}{%
+\subsubsection{Problem 4}\label{problem-4-3}}
+
+The speed of a bullet as it travels down the barrel of a rifle toward
+the opening is given by
+\(v = (-4.20 \cdot 10^7) t^2 + (2.30 \cdot 10^5) t\), where \(v\) is in
+meters per second and \(t\) is in seconds. The acceleration of the
+bullet just as it leaves the barrel is zero.
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\tightlist
+\item
+  Determine the acceleration and position of the bullet as a function of
+  time when the bullet is in the barrel. (Use t as necessary and round
+  all numerical coefficients to exactly 3 significant figures.)
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  \(a = \left(-8.40\cdot 10^7\right)t+\left(2.30\cdot 10^5\right)\)
+  m/s\(^2\)
+\item
+  \(x = \frac{\left(-4.20\cdot 10^7\right)t^3}{3}+\frac{\left(2.30\cdot 10^5\right)t^2}{2}\)
+  m
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\setcounter{enumi}{1}
+\item
+  Determine the length of time the bullet is accelerated. \begin{align*}
+  0 &= \left(-8.40\cdot 10^7\right)t+\left(2.30\cdot 10^5\right) \\
+    &= 0.002738 \text{ s}
+  \end{align*}
+\item
+  Find the speed at which the bullet leaves the barrel. \begin{align*}
+  v &= \left(-4.20\cdot 10^7\right)(0.002738)^2+\left(2.30\cdot 10^5\right)(0.002738) \\
+  &= 312 \text{ m/s}
+  \end{align*}
+\item
+  What is the length of the barrel?
+\end{enumerate}
+
+\begin{align*}
+x &= \frac{\left(-4.20\cdot 10^7\right)(0.002738)^3}{3}+\frac{\left(2.30\cdot 10^5\right)(0.002738)^2}{2} \\
+&= 0.575 \text{ m}
+\end{align*}
 
 
 

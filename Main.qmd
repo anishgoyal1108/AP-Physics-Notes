@@ -175,7 +175,6 @@ t &= 1.839 \text{ hours}
 - $x-x_0 = V_0(t-t_0) + \frac{1}{2}a(t-t_0)^2$
 
 ### Given $x=4t^4 - 6t$, find $a$ when $t=2$.
-
 \begin{align*}
 \frac{dx}{dt} &= 16t^3 - 6 \\
 \frac{d^2x}{dt^2} &= 48t^2 \\
@@ -264,7 +263,6 @@ A particle starts from rest and accelerates as shown in the figure below.
 (b) Determine the particle's speed at $t = 20.0$ s?
   - $\int_0^{20} a \ \mathrm{d}t = 10 \cdot 2 + 5 \cdot (-3) = 20 - 15 = 5$ m/s
 (c) Determine the distance traveled in the first $20.0$ s. (Enter your answer to one decimal places.)
-
 \begin{align*}
 \Delta x \text{ from 0-10 seconds: }\frac{1}{2} \cdot 2 \cdot 10^2 &= 100 \\
 \Delta x \text{ from 10-15 seconds: }20 \cdot 5 &= 100 \\
@@ -324,3 +322,90 @@ An object moves along the x axis according to the equation $x = 3.25t^2 − 2.00
 - Time and distance are actually *deltas* (i.e. $\Delta t$ and $\Delta x$)
 - So you have to subtract the initial time and distance from the final time and distance
   - Example: $x-x_0 = V_0(t-t_0) + \frac{1}{2}a(t-t_0)^2$
+
+## Freefall and Calculus (08/08 Homework)
+### Problem 1
+An attacker at the base of a castle wall $3.60$ m high throws a rock straight up with speed $8.00$ m/s from a height of $1.60$ m above the ground.
+
+  (a) Will the rock reach the top of the wall?
+
+  - Yes, because the result from part b is not imaginary.
+
+  (b) If so, what is its speed at the top? If not, what initial speed must it have to reach the top?
+  \begin{align*}
+  V_f^2 &= 8^2 + 2(-9.81)(3.6-1.6) \\
+  V_f^2 = 64 - 39.24 \\
+  V_f &= \sqrt{24.76} \\
+  &= 4.976 \text{ m/s}
+  \end{align*}
+
+  (c) Find the change in speed of a rock thrown straight down from the top of the wall at an initial speed of $8.00$ m/s and moving between the same two points.
+  \begin{align*}
+  V_f^2 &= 8^2 + 2(-9.81)(1.6-3.6) \\
+  V_f^2 = 64 + 39.24 \\
+  V_f &= \sqrt{103.24} \\
+  &= 10.161 \text{ m/s}
+  \end{align*}
+
+  (d) Does the change in speed of the downward-moving rock agree with the magnitude of the speed change of the rock moving upward between the same elevations?
+
+  - No.
+
+  (e) Explain physically why it does or does not agree.
+  
+  - The initial velocity when the ball up is sent up is acting against acceleration due to gravity, whereas the initial velocity when you send the ball back down is acting with acceleration due to gravity. And this is important to note because the ball spends less time to reach the ground than the time it takes to halt in the air when thrown upward. And therefore, the delta V's for both are not going to remain consistent since the times are not the same.
+
+### Problem 2
+It is possible to shoot an arrow at a speed as high as 122 m/s.
+
+(a) If friction is neglected, how high would an arrow launched at this speed rise if shot straight up?
+\begin{align*}
+0 &= 122^2 + 2(-9.81)x \\
+-14884 &= -19.62x \\
+x &= 758.614 \text{ m}
+\end{align*}
+
+(b) How long would the arrow be in the air?
+\begin{align*}
+758.614 &= 122t + \frac{1}{2}(9.81)t^2 \\
+0 &= -4.905t^2 + 122t - 758.614 \\
+t &= 24.873 \text{ s}
+\end{align*}
+
+### Problem 3
+The height of a helicopter above the ground is given by $h = 3.10t^3$, where $h$ is in meters and $t$ is in seconds. At $t = 1.90$ s, the helicopter releases a small mailbag. How long after its release does the mailbag reach the ground?
+\begin{align*}
+x &= 3.10 \cdot 1.9^3 \\ 
+&= 21.2629 \\
+V_0 = 9.30 \cdot 1.9^2 \\
+&= 33.573 \\
+-21.2629 &= 33.573t + \frac{1}{2}(-9.81)t^2 \\
+0 &= -4.905t^2 + 33.573t + 21.2629 \\
+t &= 7.428 \text{ s}
+\end{align*}
+
+### Problem 4
+The speed of a bullet as it travels down the barrel of a rifle toward the opening is given by $v = (-4.20 \cdot 10^7) t^2 + (2.30 \cdot 10^5) t$, where $v$ is in meters per second and $t$ is in seconds. The acceleration of the bullet just as it leaves the barrel is zero. 
+
+(a) Determine the acceleration and position of the bullet as a function of time when the bullet is in the barrel. (Use t as necessary and round all numerical coefficients to exactly 3 significant figures.) 
+
+  - $a = \left(-8.40\cdot 10^7\right)t+\left(2.30\cdot 10^5\right)$ m/s$^2$
+  - $x = \frac{\left(-4.20\cdot 10^7\right)t^3}{3}+\frac{\left(2.30\cdot 10^5\right)t^2}{2}$ m
+
+(b) Determine the length of time the bullet is accelerated.
+\begin{align*}
+0 &= \left(-8.40\cdot 10^7\right)t+\left(2.30\cdot 10^5\right) \\
+  &= 0.002738 \text{ s}
+\end{align*}
+
+(c) Find the speed at which the bullet leaves the barrel.
+\begin{align*}
+v &= \left(-4.20\cdot 10^7\right)(0.002738)^2+\left(2.30\cdot 10^5\right)(0.002738) \\
+&= 312 \text{ m/s}
+\end{align*}
+
+(d) What is the length of the barrel?
+\begin{align*}
+x &= \frac{\left(-4.20\cdot 10^7\right)(0.002738)^3}{3}+\frac{\left(2.30\cdot 10^5\right)(0.002738)^2}{2} \\
+&= 0.575 \text{ m}
+\end{align*}
