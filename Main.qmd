@@ -9,6 +9,7 @@ code-line-numbers: true
 number-sections: true
 mainfont: Inter
 sansfont: Inter
+mathfont: Fira Math
 keep-tex: true
 colorlinks: true
 include-in-header: 
