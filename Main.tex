@@ -172,7 +172,7 @@
 \input{./title.tex}
 \newpage
 
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[frame hidden, interior hidden, boxrule=0pt, enhanced, sharp corners, breakable, borderline west={3pt}{0pt}{shadecolor}]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[interior hidden, borderline west={3pt}{0pt}{shadecolor}, breakable, frame hidden, sharp corners, boxrule=0pt, enhanced]}{\end{tcolorbox}}\fi
 
 \renewcommand*\contentsname{Table of Contents}
 {
@@ -226,14 +226,6 @@
   You have to take the magnitude of vectors for every time you change
   position
 \item
-  \(S = |x_2 - x_1| + |x_1 - x_0| + ...\)
-\end{itemize}
-
-\hypertarget{average-velocity}{%
-\subsubsection{Average Velocity}\label{average-velocity}}
-
-\begin{itemize}
-\tightlist
 \item
   Defined as the change in displacement over time
 \item
@@ -889,15 +881,15 @@ Relationships}\label{velocity-acceleration-relationships}}
 \begin{minipage}[b]{\linewidth}\raggedright
 Phab Four
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\texttt{V\_0}
+\(V_0\)
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\texttt{V\_f}
+\(V_f\)
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\texttt{a}
+\(a\)
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\texttt{t}
+\(t\)
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\texttt{x}
+\(x\)
 \end{minipage} \\
 \midrule\noalign{}
 \endhead
@@ -1304,6 +1296,119 @@ Remember that the derivative of a constant is 0, and
 \(\hat{i}, \hat{j}, \hat{k}\) are constants: \begin{align*}
 \frac{\mathrm{d}}{\mathrm{d}t}(r_x\hat{i}) = \frac{\mathrm{d}r_x}{\mathrm{d}t}\hat{i} + r_x\frac{\mathrm{d}\hat{i}}{\mathrm{d}t}
 \end{align*}
+
+\hypertarget{kinematics-in-two-dimensions}{%
+\subsection{Kinematics in Two
+Dimensions}\label{kinematics-in-two-dimensions}}
+
+\begin{itemize}
+\tightlist
+\item
+  Horizontal and vertical motion are completely independent of each
+  other
+
+  \begin{itemize}
+  \tightlist
+  \item
+    However, they share the same \textbf{time}
+  \end{itemize}
+\end{itemize}
+
+\hypertarget{projectile-vectors}{%
+\subsubsection{Projectile Vectors}\label{projectile-vectors}}
+
+\begin{itemize}
+\tightlist
+\item
+  The horizontal component of a projectile's velocity is constant, equal
+  to the initial velocity
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \(v_x = v_0\)
+  \end{itemize}
+\item
+  The vertical component of a projectile's velocity is constantly
+  changing due to gravity
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \(v_y = v_0 + gt\)
+  \end{itemize}
+\item
+  The overall velocity of a projectile is the resultant vector of the
+  horizontal and vertical components
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \(||\vec{v}|| = \sqrt{{v_{0x}}^2 + (v_{0y}gt)^2}\)
+  \end{itemize}
+\item
+  The angle of the projectile is the angle between the resultant vector
+  and the horizontal component
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \(\theta = \tan^{-1}\left(\frac{gt}{v_0}\right)\)
+  \end{itemize}
+\end{itemize}
+
+\includegraphics{img/projectile-vectors.png}
+
+\hypertarget{horizontal-projectile-motion}{%
+\subsubsection{Horizontal Projectile
+Motion}\label{horizontal-projectile-motion}}
+
+\begin{itemize}
+\tightlist
+\item
+  Acceleration is always 0
+\item
+  \(V_f = V_0 = v\cos{\theta}\)
+\item
+  \(t = \frac{2v\sin{\theta}}{g}\)
+\item
+  \(x = V_0t + \frac{1}{2}at^2\)
+\item
+  \(x = \frac{v^2 \cdot 2\sin({\theta})\cos({\theta})}{g}\)
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Therefore, per the \emph{Double Angle Identity},
+    \(x = \frac{v^2\sin({2\theta})}{g}\)
+  \end{itemize}
+\end{itemize}
+
+\hypertarget{vertical-projectile-motion}{%
+\subsubsection{Vertical Projectile
+Motion}\label{vertical-projectile-motion}}
+
+\begin{itemize}
+\tightlist
+\item
+  Horizontal displacement (\(x\)) is always 0
+\item
+  \(v_0 = v\sin{\theta}\)
+\item
+  \(a = -g\)
+\item
+  \(x = v_0t + \frac{1}{2}at^2\)
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Therefore, \(0 = (v\sin{\theta})t - \frac{1}{2}gt^2\)
+  \end{itemize}
+\item
+  \(t = \frac{2v\sin{\theta}}{g}\)
+\item
+  \(h = \frac{v^2}{g}\sin^2{\theta}\)
+\end{itemize}
 
 
 

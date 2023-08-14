@@ -57,9 +57,7 @@ include-before-body:
 ### Distance
 
 - You have to take the magnitude of vectors for every time you change position
-- $S = |x_2 - x_1| + |x_1 - x_0| + ...$
-
-### Average Velocity
+- 
 
 - Defined as the change in displacement over time
 - $\frac{\Delta x}{\Delta t} = V_\text{avg} = \bar{V}$
@@ -476,3 +474,36 @@ Remember that the derivative of a constant is 0, and $\hat{i}, \hat{j}, \hat{k}$
 \begin{align*}
 \frac{\mathrm{d}}{\mathrm{d}t}(r_x\hat{i}) = \frac{\mathrm{d}r_x}{\mathrm{d}t}\hat{i} + r_x\frac{\mathrm{d}\hat{i}}{\mathrm{d}t}
 \end{align*}
+
+## Kinematics in Two Dimensions
+- Horizontal and vertical motion are completely independent of each other
+  - However, they share the same **time**
+
+### Projectile Vectors
+- The horizontal component of a projectile's velocity is constant, equal to the initial velocity
+  - $v_x = v_0$
+- The vertical component of a projectile's velocity is constantly changing due to gravity
+  - $v_y = v_0 + gt$
+- The overall velocity of a projectile is the resultant vector of the horizontal and vertical components
+  - $||\vec{v}|| = \sqrt{{v_{0x}}^2 + (v_{0y}gt)^2}$
+- The angle of the projectile is the angle between the resultant vector and the horizontal component
+  - $\theta = \tan^{-1}\left(\frac{gt}{v_0}\right)$
+
+![](img/projectile-vectors.png)
+
+### Horizontal Projectile Motion
+- Acceleration is always 0
+- $V_f = V_0 = v\cos{\theta}$
+- $t = \frac{2v\sin{\theta}}{g}$
+- $x = V_0t + \frac{1}{2}at^2$
+- $x = \frac{v^2 \cdot 2\sin({\theta})\cos({\theta})}{g}$
+  - Therefore, per the *Double Angle Identity*, $x = \frac{v^2\sin({2\theta})}{g}$
+
+### Vertical Projectile Motion
+- Horizontal displacement ($x$) is always 0
+- $v_0 = v\sin{\theta}$
+- $a = -g$
+- $x = v_0t + \frac{1}{2}at^2$
+  - Therefore, $0 = (v\sin{\theta})t - \frac{1}{2}gt^2$
+- $t = \frac{2v\sin{\theta}}{g}$
+- $h = \frac{v^2}{g}\sin^2{\theta}$
